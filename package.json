@@ -3,13 +3,13 @@
     "private": "true",
     "version": "1.14.13.3",
     "description": "The other cutest Discord client mod",
-    "homepage": "https://github.com/Dreamcord/Dreamcord#readme",
+    "homepage": "https://github.com/toomi9708-ui/Dreamcord#readme",
     "bugs": {
-        "url": "https://github.com/Dreamcord/Dreamcord/issues"
+        "url": "https://github.com/toomi9708-ui/Dreamcord/issues"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Dreamcord/Dreamcord.git"
+        "url": "git+https://github.com/toomi9708-ui/Dreamcord.git"
     },
     "license": "GPL-3.0-or-later",
     "author": "Dreamcord",
@@ -75,6 +75,7 @@
         "@types/react-dom": "^19.0.4",
         "@types/yazl": "^3.3.1",
         "@vencord/discord-types": "link:packages/discord-types",
+        "Equibuilds#main": "github:Equicord/Equibuilds#main",
         "diff": "^9.0.0",
         "esbuild": "^0.28.0",
         "eslint": "10.2.0",
@@ -104,5 +105,8 @@
     "packageManager": "pnpm@11.0.9",
     "engines": {
         "node": ">=18"
+    },
+    "imports": {
+        "#dreamcordplugins/*": "./node_modules/@equicordplugins/*"
     }
 }

@@ -60,7 +60,7 @@
                 "./src/webpack/types"
             ],
             "@dreamcordplugins/*": [
-                "./src/dreamcordplugins/*"
+                "./src/userplugins/*"
             ]
         },
         "plugins": [
