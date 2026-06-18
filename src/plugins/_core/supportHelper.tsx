@@ -27,14 +27,14 @@ import { Flex } from "@components/Flex";
 import { Link } from "@components/Link";
 import { Paragraph } from "@components/Paragraph";
 import { openSettingsTabModal, UpdaterTab } from "@components/settings";
-import { platformName } from "@equicordplugins/equicordHelper/utils";
+import { platformName } from "@dreamcordplugins/dreamcordHelper/utils";
 import customIdle from "@plugins/customIdle";
 import { gitHash, gitHashShort } from "@shared/vencordUserAgent";
 import { CONTRIB_ROLE_ID, Devs, DONOR_ROLE_ID, EQUICORD_TEAM, GUILD_ID, SUPPORT_CHANNEL_ID, SUPPORT_CHANNEL_IDS, VC_CONTRIB_ROLE_ID, VC_DONOR_ROLE_ID, VC_GUILD_ID, VC_REGULAR_ROLE_ID, VENCORD_CONTRIB_ROLE_ID } from "@utils/constants";
 import { sendMessage } from "@utils/discord";
 import { Logger } from "@utils/Logger";
 import { Margins } from "@utils/margins";
-import { isAnyPluginDev, isEquicordGuild, isEquicordSupport, isKnownIssuesCategory, isSupportChannel, tryOrElse } from "@utils/misc";
+import { isAnyPluginDev, isDreamcordGuild, isDreamcordSupport, isKnownIssuesCategory, isSupportChannel, tryOrElse } from "@utils/misc";
 import { relaunch } from "@utils/native";
 import { onlyOnce } from "@utils/onlyOnce";
 import { makeCodeblock } from "@utils/text";
@@ -55,9 +55,9 @@ const TrustedRolesIds = [
     VC_CONTRIB_ROLE_ID, // Vencord Contributor
     VC_REGULAR_ROLE_ID, // Vencord Regular
     VC_DONOR_ROLE_ID, // Vencord Donor
-    EQUICORD_TEAM, // Equicord Team
-    DONOR_ROLE_ID, // Equicord Donor
-    CONTRIB_ROLE_ID, // Equicord Contributor
+    EQUICORD_TEAM, // Dreamcord Team
+    DONOR_ROLE_ID, // Dreamcord Donor
+    CONTRIB_ROLE_ID, // Dreamcord Contributor
     VENCORD_CONTRIB_ROLE_ID, // Vencord Contributor
 ];
 
@@ -137,7 +137,7 @@ async function generateDebugInfoMessage() {
     let clientString = `${clientInfo.name}`;
     clientString += `${clientInfo.version ? ` v${clientInfo.version}` : ""}`;
     clientString += `${clientInfo.info ? ` • ${clientInfo.info}` : ""}`;
-    clientString += `${clientInfo.shortHash ? ` • [${clientInfo.shortHash}](<https://github.com/Equicord/Equibop/commit/${clientInfo.hash}>)` : ""}`;
+    clientString += `${clientInfo.shortHash ? ` • [${clientInfo.shortHash}](<https://github.com/Dreamcord/Equibop/commit/${clientInfo.hash}>)` : ""}`;
 
     const spoofInfo = IS_EQUIBOP ? tryOrElse(() => VesktopNative.app.getPlatformSpoofInfo?.(), null) : null;
     const platformDisplay = spoofInfo?.spoofed
@@ -145,8 +145,8 @@ async function generateDebugInfoMessage() {
         : platformName();
 
     const info = {
-        Equicord:
-            `v${VERSION} • [${gitHashShort}](<https://github.com/Equicord/Equicord/commit/${gitHash}>)` +
+        Dreamcord:
+            `v${VERSION} • [${gitHashShort}](<https://github.com/Dreamcord/Dreamcord/commit/${gitHash}>)` +
             `${IS_EQUIBOP ? "" : SettingsPlugin.getVersionInfo()} - ${Intl.DateTimeFormat("en-US", { dateStyle: "medium" }).format(BUILD_TIMESTAMP)}`,
         Client: `${RELEASE_CHANNEL} ~ ${clientString}`,
         Platform: platformDisplay
@@ -171,7 +171,7 @@ async function generateDebugInfoMessage() {
     const commonIssues = {
         "Activity Sharing Disabled": tryOrElse(() => !ShowCurrentGame.getSetting(), false),
         "Link Embeds Disabled": tryOrElse(() => !ShowEmbeds.getSetting(), false),
-        "Equicord DevBuild": !IS_STANDALONE,
+        "Dreamcord DevBuild": !IS_STANDALONE,
         "Equibop DevBuild": IS_EQUIBOP && tryOrElse(() => VesktopNative.app.isDevBuild?.(), false),
         "Platform Spoofed": spoofInfo?.spoofed ?? false,
         "Has UserPlugins": Object.values(PluginMeta).some(m => m.userPlugin),
@@ -300,11 +300,11 @@ function DevBuildConfirmModal(props: RenderModalProps) {
             }}
         >
             <div>
-                <Paragraph>You are using a custom build of Equicord, which we do not provide support for!</Paragraph>
+                <Paragraph>You are using a custom build of Dreamcord, which we do not provide support for!</Paragraph>
 
                 <Paragraph className={Margins.top8}>
-                    We only provide support for <Link href="https://equicord.org/download">official builds</Link>.
-                    Either <Link href="https://equicord.org/download">switch to an official build</Link> or figure your issue out yourself.
+                    We only provide support for <Link href="https://dreamcord.org/download">official builds</Link>.
+                    Either <Link href="https://dreamcord.org/download">switch to an official build</Link> or figure your issue out yourself.
                 </Paragraph>
 
                 <Text variant="text-md/bold" className={Margins.top8}>You will be banned from receiving support if you ignore this rule.</Text>
@@ -332,17 +332,17 @@ export default definePlugin({
 
     commands: [
         {
-            name: "equicord-debug",
-            description: "Send Equicord debug info",
+            name: "dreamcord-debug",
+            description: "Send Dreamcord debug info",
             // @ts-ignore
-            predicate: ctx => isAnyPluginDev(UserStore.getCurrentUser()?.id) || isEquicordGuild(ctx?.guild?.id, true),
+            predicate: ctx => isAnyPluginDev(UserStore.getCurrentUser()?.id) || isDreamcordGuild(ctx?.guild?.id, true),
             execute: async () => ({ content: await generateDebugInfoMessage() })
         },
         {
-            name: "equicord-plugins",
-            description: "Send Equicord plugin list",
+            name: "dreamcord-plugins",
+            description: "Send Dreamcord plugin list",
             // @ts-ignore
-            predicate: ctx => isAnyPluginDev(UserStore.getCurrentUser()?.id) || isEquicordGuild(ctx?.guild?.id, true),
+            predicate: ctx => isAnyPluginDev(UserStore.getCurrentUser()?.id) || isDreamcordGuild(ctx?.guild?.id, true),
             execute: async () => {
                 const channelId = SelectedChannelStore.getChannelId();
                 const pluginList = generatePluginList();
@@ -386,7 +386,7 @@ export default definePlugin({
                             onCancel={() => openSettingsTabModal(UpdaterTab!)}
                         >
                             <div>
-                                <Paragraph>You are using an outdated version of Equicord! Chances are, your issue is already fixed.</Paragraph>
+                                <Paragraph>You are using an outdated version of Dreamcord! Chances are, your issue is already fixed.</Paragraph>
                                 <Paragraph className={Margins.top8}>
                                     Please first update before asking for support!
                                 </Paragraph>
@@ -412,9 +412,9 @@ export default definePlugin({
                         variant="primary"
                     >
                         <div>
-                            <Paragraph>You are using an externally updated Equicord version, which we do not provide support for!</Paragraph>
+                            <Paragraph>You are using an externally updated Dreamcord version, which we do not provide support for!</Paragraph>
                             <Paragraph className={Margins.top8}>
-                                Please either switch to an <Link href="https://equicord.org/download">officially supported version of Equicord</Link>, or
+                                Please either switch to an <Link href="https://dreamcord.org/download">officially supported version of Dreamcord</Link>, or
                                 contact your package maintainer for support instead.
                             </Paragraph>
                         </div>
@@ -433,11 +433,11 @@ export default definePlugin({
     renderMessageAccessory(props) {
         const buttons = [] as JSX.Element[];
 
-        const equicordSupport = isEquicordSupport(props.message.author.id);
+        const dreamcordSupport = isDreamcordSupport(props.message.author.id);
 
         const shouldAddUpdateButton =
             !IS_UPDATER_DISABLED
-            && ((isSupportChannel(props.channel.id) && equicordSupport))
+            && ((isSupportChannel(props.channel.id) && dreamcordSupport))
             && props.message.content?.toLowerCase().includes("update");
 
         if (shouldAddUpdateButton) {
@@ -462,15 +462,15 @@ export default definePlugin({
             );
         }
 
-        if (equicordSupport && isSupportChannel(props.channel.id) && PermissionStore.can(PermissionsBits.SEND_MESSAGES, props.channel)) {
-            if (props.message.content.includes("/equicord-debug") || props.message.content.includes("/equicord-plugins")) {
+        if (dreamcordSupport && isSupportChannel(props.channel.id) && PermissionStore.can(PermissionsBits.SEND_MESSAGES, props.channel)) {
+            if (props.message.content.includes("/dreamcord-debug") || props.message.content.includes("/dreamcord-plugins")) {
                 buttons.push(
                     <Button
                         key="vc-dbg"
                         variant="secondary"
                         onClick={async () => sendMessage(props.channel.id, { content: await generateDebugInfoMessage() })}
                     >
-                        Run /equicord-debug
+                        Run /dreamcord-debug
                     </Button>,
                     <Button
                         key="vc-plg-list"
@@ -490,13 +490,13 @@ export default definePlugin({
                             }
                         }}
                     >
-                        Run /equicord-plugins
+                        Run /dreamcord-plugins
                     </Button>
                 );
             }
         }
 
-        if (equicordSupport || (isSupportChannel(props.channel.id) || isKnownIssuesCategory(props.channel.parent_id))) {
+        if (dreamcordSupport || (isSupportChannel(props.channel.id) || isKnownIssuesCategory(props.channel.parent_id))) {
             const match = CodeBlockRe.exec(props.message.content || props.message.embeds[0]?.rawDescription || "");
             if (match) {
                 buttons.push(
@@ -537,7 +537,7 @@ export default definePlugin({
 
         return (
             <Card variant="warning" className={Margins.top8} defaultPadding>
-                Please do not private message Equicord & Vencord plugin developers for support!
+                Please do not private message Dreamcord & Vencord plugin developers for support!
                 <br />
                 Instead, use the support channel: {Parser.parse("https://discord.com/channels/1173279886065029291/1297590739911573585")}
                 {!ChannelStore.getChannel(SUPPORT_CHANNEL_ID) && " (Click the link to join)"}

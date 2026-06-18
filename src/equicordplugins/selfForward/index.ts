@@ -4,14 +4,14 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-import { EquicordDevs } from "@utils/constants";
+import { DreamcordDevs } from "@utils/constants";
 import definePlugin from "@utils/types";
 
 export default definePlugin({
     name: "SelfForward",
     description: "Adds the current channel to the forward list popup",
     tags: ["Utility"],
-    authors: [EquicordDevs.VillainsRule],
+    authors: [DreamcordDevs.VillainsRule],
     patches: [
         {
             find: ".getChannelHistory(),",

@@ -7,7 +7,7 @@
 import type { NavContextMenuPatchCallback } from "@api/ContextMenu";
 import ErrorBoundary from "@components/ErrorBoundary";
 import { CloudUploadIcon } from "@components/Icons";
-import { EquicordDevs } from "@utils/constants";
+import { DreamcordDevs } from "@utils/constants";
 import definePlugin from "@utils/types";
 import { findComponentByCodeLazy } from "@webpack";
 import { Menu } from "@webpack/common";
@@ -38,7 +38,7 @@ const ctxMenuPatch: NavContextMenuPatchCallback = (children, props) => {
 export default definePlugin({
     name: "ClipUpload",
     description: "Adds a button to upload a local video file as a Discord clip.",
-    authors: [EquicordDevs.qdnx, EquicordDevs.BachLe2000, EquicordDevs.pandaptable],
+    authors: [DreamcordDevs.qdnx, DreamcordDevs.BachLe2000, DreamcordDevs.pandaptable],
     tags: ["Media", "Utility"],
 
     patches: [

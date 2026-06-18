@@ -98,7 +98,7 @@ interface SettingsLayoutBuilder {
 const settings = definePluginSettings({
     settingsLocation: {
         type: OptionType.SELECT,
-        description: "Where to put the Equicord settings section",
+        description: "Where to put the Dreamcord settings section",
         options: [
             { label: "At the very top", value: "top" },
             { label: "Above the Nitro section", value: "aboveNitro", default: true },
@@ -185,58 +185,58 @@ export default definePlugin({
         const layout = originalLayoutBuilder.buildLayout();
         if (originalLayoutBuilder.key !== "$Root") return layout;
         if (!Array.isArray(layout)) return layout;
-        if (layout.some(s => s?.key === "equicord_section")) return layout;
+        if (layout.some(s => s?.key === "dreamcord_section")) return layout;
 
         const { buildEntry } = this;
 
-        const equicordEntries: SettingsLayoutNode[] = [
+        const dreamcordEntries: SettingsLayoutNode[] = [
             buildEntry({
-                key: "equicord_main",
-                title: "Equicord",
-                panelTitle: "Equicord Settings",
+                key: "dreamcord_main",
+                title: "Dreamcord",
+                panelTitle: "Dreamcord Settings",
                 Component: VencordTab,
                 Icon: MainSettingsIcon
             }),
             buildEntry({
-                key: "equicord_plugins",
+                key: "dreamcord_plugins",
                 title: "Plugins",
                 Component: PluginsTab,
                 Icon: PluginsIcon
             }),
             buildEntry({
-                key: "equicord_themes",
+                key: "dreamcord_themes",
                 title: "Themes",
                 Component: ThemesTab,
                 Icon: PaintbrushIcon
             }),
             !IS_UPDATER_DISABLED && UpdaterTab && buildEntry({
-                key: "equicord_updater",
+                key: "dreamcord_updater",
                 title: "Updater",
-                panelTitle: "Equicord Updater",
+                panelTitle: "Dreamcord Updater",
                 Component: UpdaterTab,
                 Icon: UpdaterIcon
             }),
             buildEntry({
-                key: "equicord_changelog",
+                key: "dreamcord_changelog",
                 title: "Changelog",
                 Component: ChangelogTab,
                 Icon: LogIcon,
             }),
             buildEntry({
-                key: "equicord_cloud",
+                key: "dreamcord_cloud",
                 title: "Cloud",
-                panelTitle: "Equicord Cloud",
+                panelTitle: "Dreamcord Cloud",
                 Component: CloudTab,
                 Icon: CloudIcon
             }),
             buildEntry({
-                key: "equicord_backup_restore",
+                key: "dreamcord_backup_restore",
                 title: "Backup & Restore",
                 Component: BackupAndRestoreTab,
                 Icon: BackupRestoreIcon
             }),
             !IS_STANDALONE && PatchHelperTab && buildEntry({
-                key: "equicord_patch_helper",
+                key: "dreamcord_patch_helper",
                 title: "Patch Helper",
                 Component: PatchHelperTab,
                 Icon: PatchHelperIcon
@@ -244,11 +244,11 @@ export default definePlugin({
             ...this.customEntries.map(buildEntry)
         ].filter(isTruthy);
 
-        const equicordSection: SettingsLayoutNode = {
-            key: "equicord_section",
+        const dreamcordSection: SettingsLayoutNode = {
+            key: "dreamcord_section",
             type: LayoutTypes.SECTION,
-            useTitle: () => "Equicord Settings",
-            buildLayout: () => equicordEntries
+            useTitle: () => "Dreamcord Settings",
+            buildLayout: () => dreamcordEntries
         };
 
         const { settingsLocation } = settings.store;
@@ -271,7 +271,7 @@ export default definePlugin({
             idx += 1;
         }
 
-        layout.splice(idx, 0, equicordSection);
+        layout.splice(idx, 0, dreamcordSection);
 
         return layout;
     },
@@ -313,7 +313,7 @@ export default definePlugin({
     getInfoRows() {
         const { electronVersion, chromiumVersion, getVersionInfo } = this;
 
-        const rows = [`Equicord ${gitHashShort}${getVersionInfo()}`];
+        const rows = [`Dreamcord ${gitHashShort}${getVersionInfo()}`];
 
         if (electronVersion) rows.push(`Electron ${electronVersion}`);
         if (chromiumVersion) rows.push(`Chromium ${chromiumVersion}`);

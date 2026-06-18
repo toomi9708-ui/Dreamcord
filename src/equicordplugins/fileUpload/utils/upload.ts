@@ -4,9 +4,9 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-import { normalizeCorsProxyUrl, toProxiedUrl } from "@equicordplugins/fileUpload/constants";
-import { settings } from "@equicordplugins/fileUpload/settings";
-import { fallbackServiceOrder, serviceLabels, ServiceType, ShareXUploaderConfig, UploadResponse } from "@equicordplugins/fileUpload/types";
+import { normalizeCorsProxyUrl, toProxiedUrl } from "@dreamcordplugins/fileUpload/constants";
+import { settings } from "@dreamcordplugins/fileUpload/settings";
+import { fallbackServiceOrder, serviceLabels, ServiceType, ShareXUploaderConfig, UploadResponse } from "@dreamcordplugins/fileUpload/types";
 import { copyToClipboard } from "@utils/clipboard";
 import { insertTextIntoChatInputBox } from "@utils/discord";
 import { Logger } from "@utils/Logger";

@@ -29,11 +29,11 @@ export const DISCORD_SETTINGS_ROUTES: SettingsRoute[] = [
     { route: "authorized_apps", label: "Authorized Apps", keywords: ["oauth", "apps"] },
     { route: "family_center", label: "Family Center", keywords: ["family", "safety"] },
     { route: "advanced", label: "Advanced", keywords: ["developer"] },
-    { route: "equicord_main", label: "Equicord", keywords: ["vencord"] },
-    { route: "equicord_plugins", label: "Equicord Plugins", keywords: ["plugins"] },
-    { route: "equicord_themes", label: "Equicord Themes", keywords: ["themes", "css"] },
-    { route: "equicord_updater", label: "Equicord Updater", keywords: ["update"] },
-    { route: "equicord_changelog", label: "Equicord Changelog", keywords: ["changelog", "news"] }
+    { route: "dreamcord_main", label: "Dreamcord", keywords: ["vencord"] },
+    { route: "dreamcord_plugins", label: "Dreamcord Plugins", keywords: ["plugins"] },
+    { route: "dreamcord_themes", label: "Dreamcord Themes", keywords: ["themes", "css"] },
+    { route: "dreamcord_updater", label: "Dreamcord Updater", keywords: ["update"] },
+    { route: "dreamcord_changelog", label: "Dreamcord Changelog", keywords: ["changelog", "news"] }
 ];
 
 const ROUTE_ALIASES = new Map<string, string[]>([
@@ -52,11 +52,11 @@ const ROUTE_ALIASES = new Map<string, string[]>([
     ["chat", ["chat_panel"]],
     ["authorized_apps", ["authorized_apps_panel"]],
     ["family_center", ["family_center_panel"]],
-    ["equicord_main", ["equicord_main_panel"]],
-    ["equicord_plugins", ["equicord_plugins_panel"]],
-    ["equicord_themes", ["equicord_themes_panel"]],
-    ["equicord_updater", ["equicord_updater_panel"]],
-    ["equicord_changelog", ["equicord_changelog_panel"]]
+    ["dreamcord_main", ["dreamcord_main_panel"]],
+    ["dreamcord_plugins", ["dreamcord_plugins_panel"]],
+    ["dreamcord_themes", ["dreamcord_themes_panel"]],
+    ["dreamcord_updater", ["dreamcord_updater_panel"]],
+    ["dreamcord_changelog", ["dreamcord_changelog_panel"]]
 ]);
 
 const ROUTE_LOOKUP = (() => {

@@ -8,23 +8,23 @@ import type { PaletteCommand } from "../api/types";
 import { BoltIcon, GearIcon, PaintIcon, RestartIcon } from "../ui/icons";
 import { openSettingsPage } from "./openSettings";
 
-const SECTION = "Equicord";
+const SECTION = "Dreamcord";
 
-export const equicordCommands: PaletteCommand[] = [
+export const dreamcordCommands: PaletteCommand[] = [
     {
-        id: "equicord.settings",
-        title: "Open Equicord Settings",
+        id: "dreamcord.settings",
+        title: "Open Dreamcord Settings",
         section: SECTION,
-        keywords: ["equicord", "vencord", "settings"],
+        keywords: ["dreamcord", "vencord", "settings"],
         icon: GearIcon,
         actions: [{
             id: "run",
-            label: "Open Equicord Settings",
-            run: () => void openSettingsPage("equicord_main")
+            label: "Open Dreamcord Settings",
+            run: () => void openSettingsPage("dreamcord_main")
         }]
     },
     {
-        id: "equicord.quickCss",
+        id: "dreamcord.quickCss",
         title: "Open QuickCSS",
         section: SECTION,
         keywords: ["css", "quickcss", "editor", "style"],
@@ -36,7 +36,7 @@ export const equicordCommands: PaletteCommand[] = [
         }]
     },
     {
-        id: "equicord.updater",
+        id: "dreamcord.updater",
         title: "Open Updater",
         section: SECTION,
         keywords: ["update", "updater", "version"],
@@ -45,11 +45,11 @@ export const equicordCommands: PaletteCommand[] = [
         actions: [{
             id: "run",
             label: "Open Updater",
-            run: () => void openSettingsPage("equicord_updater")
+            run: () => void openSettingsPage("dreamcord_updater")
         }]
     },
     {
-        id: "equicord.changelog",
+        id: "dreamcord.changelog",
         title: "Open Changelog",
         section: SECTION,
         keywords: ["changelog", "news", "whats new"],
@@ -57,11 +57,11 @@ export const equicordCommands: PaletteCommand[] = [
         actions: [{
             id: "run",
             label: "Open Changelog",
-            run: () => void openSettingsPage("equicord_changelog")
+            run: () => void openSettingsPage("dreamcord_changelog")
         }]
     },
     {
-        id: "equicord.restart",
+        id: "dreamcord.restart",
         title: "Restart Discord",
         section: SECTION,
         keywords: ["restart", "reload", "refresh"],

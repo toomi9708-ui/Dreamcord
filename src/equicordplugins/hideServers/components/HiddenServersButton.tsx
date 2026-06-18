@@ -6,7 +6,7 @@
 
 import "./style.css";
 
-import { HiddenServersStore } from "@equicordplugins/hideServers/HiddenServersStore";
+import { HiddenServersStore } from "@dreamcordplugins/hideServers/HiddenServersStore";
 import { classNameFactory } from "@utils/css";
 import { Button, GuildStore, useStateFromStores } from "@webpack/common";
 

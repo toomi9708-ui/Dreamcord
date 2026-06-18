@@ -4,9 +4,9 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-import { brushCanvas, render } from "@equicordplugins/remix/editor/components/Canvas";
-import { currentSize, ToolDefinition } from "@equicordplugins/remix/editor/components/Toolbar";
-import { Mouse } from "@equicordplugins/remix/editor/input";
+import { brushCanvas, render } from "@dreamcordplugins/remix/editor/components/Canvas";
+import { currentSize, ToolDefinition } from "@dreamcordplugins/remix/editor/components/Toolbar";
+import { Mouse } from "@dreamcordplugins/remix/editor/input";
 
 export const EraseTool: ToolDefinition = {
     onMouseMove() {

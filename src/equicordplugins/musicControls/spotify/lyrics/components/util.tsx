@@ -4,10 +4,10 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-import { settings } from "@equicordplugins/musicControls/settings";
-import { SpotifyLrcStore } from "@equicordplugins/musicControls/spotify/lyrics/providers/store";
-import { SyncedLyric } from "@equicordplugins/musicControls/spotify/lyrics/providers/types";
-import { SpotifyStore } from "@equicordplugins/musicControls/spotify/SpotifyStore";
+import { settings } from "@dreamcordplugins/musicControls/settings";
+import { SpotifyLrcStore } from "@dreamcordplugins/musicControls/spotify/lyrics/providers/store";
+import { SyncedLyric } from "@dreamcordplugins/musicControls/spotify/lyrics/providers/types";
+import { SpotifyStore } from "@dreamcordplugins/musicControls/spotify/SpotifyStore";
 import { classNameFactory } from "@utils/css";
 import { findCssClassesLazy } from "@webpack";
 import { React, useEffect, useState, useStateFromStores } from "@webpack/common";

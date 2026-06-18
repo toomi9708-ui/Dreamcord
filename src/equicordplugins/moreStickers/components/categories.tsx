@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-import { CategoryImageProps, StickerCategoryProps } from "@equicordplugins/moreStickers/types";
-import { cl } from "@equicordplugins/moreStickers/utils";
+import { CategoryImageProps, StickerCategoryProps } from "@dreamcordplugins/moreStickers/types";
+import { cl } from "@dreamcordplugins/moreStickers/utils";
 import { React } from "@webpack/common";
 import { JSX } from "react";
 

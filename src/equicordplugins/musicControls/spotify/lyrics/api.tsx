@@ -5,8 +5,8 @@
  */
 
 import { DataStore } from "@api/index";
-import { settings } from "@equicordplugins/musicControls/settings";
-import { Track } from "@equicordplugins/musicControls/spotify/SpotifyStore";
+import { settings } from "@dreamcordplugins/musicControls/settings";
+import { Track } from "@dreamcordplugins/musicControls/spotify/SpotifyStore";
 
 import { getLyricsLrclib } from "./providers/lrclibAPI";
 import { getLyricsSpotify } from "./providers/SpotifyAPI";

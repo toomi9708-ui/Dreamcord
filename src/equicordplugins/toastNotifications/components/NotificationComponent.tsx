@@ -7,7 +7,7 @@
 import "./styles.css";
 
 import ErrorBoundary from "@components/ErrorBoundary";
-import { settings as PluginSettings } from "@equicordplugins/toastNotifications/index";
+import { settings as PluginSettings } from "@dreamcordplugins/toastNotifications/index";
 import { classNameFactory } from "@utils/css";
 import { findComponentByCodeLazy } from "@webpack";
 import { FluxDispatcher, GuildStore, IconUtils, React, useEffect, useMemo, useRef, useState } from "@webpack/common";

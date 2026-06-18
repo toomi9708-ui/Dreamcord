@@ -13,7 +13,7 @@ import { HeadingPrimary, HeadingTertiary } from "@components/Heading";
 import { OpenExternalIcon } from "@components/Icons";
 import { Paragraph } from "@components/Paragraph";
 import { SettingsTab, wrapTab } from "@components/settings";
-import { SearchStatus, Theme, ThemeLikeProps } from "@equicordplugins/themeLibrary/types";
+import { SearchStatus, Theme, ThemeLikeProps } from "@dreamcordplugins/themeLibrary/types";
 import { Logger } from "@utils/Logger";
 import { Margins } from "@utils/margins";
 import { classes } from "@utils/misc";
@@ -24,7 +24,7 @@ import { ThemeCard } from "./ThemeCard";
 
 const InputStyles = findCssClassesLazy("inputWrapper", "inputError", "error");
 
-export const apiUrl = "https://themes.equicord.org/api";
+export const apiUrl = "https://themes.dreamcord.org/api";
 export const logger = new Logger("ThemeLibrary", "#e5c890");
 
 export async function fetchAllThemes(): Promise<Theme[]> {

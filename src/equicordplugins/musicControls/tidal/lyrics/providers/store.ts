@@ -5,10 +5,10 @@
  */
 
 import { showNotification } from "@api/Notifications";
-import { settings } from "@equicordplugins/musicControls/settings";
-import { getLyrics } from "@equicordplugins/musicControls/tidal/lyrics/api";
-import { EnhancedLyric } from "@equicordplugins/musicControls/tidal/lyrics/types";
-import { TidalStore } from "@equicordplugins/musicControls/tidal/TidalStore";
+import { settings } from "@dreamcordplugins/musicControls/settings";
+import { getLyrics } from "@dreamcordplugins/musicControls/tidal/lyrics/api";
+import { EnhancedLyric } from "@dreamcordplugins/musicControls/tidal/lyrics/types";
+import { TidalStore } from "@dreamcordplugins/musicControls/tidal/TidalStore";
 import { proxyLazyWebpack } from "@webpack";
 import { Flux, FluxDispatcher } from "@webpack/common";
 

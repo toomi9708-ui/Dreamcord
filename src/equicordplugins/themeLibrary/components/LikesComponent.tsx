@@ -7,9 +7,9 @@
 import * as DataStore from "@api/DataStore";
 import { Button } from "@components/Button";
 import { Margins } from "@components/margins";
-import type { Theme, ThemeLikeProps } from "@equicordplugins/themeLibrary/types";
-import { isAuthorized } from "@equicordplugins/themeLibrary/utils/auth";
-import { LikeIcon } from "@equicordplugins/themeLibrary/utils/Icons";
+import type { Theme, ThemeLikeProps } from "@dreamcordplugins/themeLibrary/types";
+import { isAuthorized } from "@dreamcordplugins/themeLibrary/utils/auth";
+import { LikeIcon } from "@dreamcordplugins/themeLibrary/utils/Icons";
 import { useEffect, useRef, useState } from "@webpack/common";
 
 import { logger, themeRequest } from "./ThemeTab";

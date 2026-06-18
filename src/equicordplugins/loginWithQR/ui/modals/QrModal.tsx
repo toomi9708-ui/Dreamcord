@@ -7,8 +7,8 @@
 import { BaseText } from "@components/BaseText";
 import { QrCodeIcon } from "@components/Icons";
 import { wrapTab } from "@components/settings";
-import loginWithQR from "@equicordplugins/loginWithQR";
-import { images } from "@equicordplugins/loginWithQR/images";
+import loginWithQR from "@dreamcordplugins/loginWithQR";
+import { images } from "@dreamcordplugins/loginWithQR/images";
 import { findByPropsLazy } from "@webpack";
 import {
     RestAPI,

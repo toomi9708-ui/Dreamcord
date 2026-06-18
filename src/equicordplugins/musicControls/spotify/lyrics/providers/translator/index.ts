@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-import settings from "@equicordplugins/musicControls";
-import { Provider, SyncedLyric } from "@equicordplugins/musicControls/spotify/lyrics/providers/types";
+import settings from "@dreamcordplugins/musicControls";
+import { Provider, SyncedLyric } from "@dreamcordplugins/musicControls/spotify/lyrics/providers/types";
 
 // stolen from src/plugins/translate/utils.ts
 

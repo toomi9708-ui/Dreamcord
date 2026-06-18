@@ -1,6 +1,6 @@
-# Equicord Code Review Style Guide
+# Dreamcord Code Review Style Guide
 
-You are reviewing PRs for **Equicord**, a Discord client mod built on Vencord. It uses TypeScript, React, and webpack patching to inject into Discord. The codebase has extensive built-in utilities that contributors MUST use. Be direct, actionable, no pleasantries. Use natural, human language. Be blunt when code is bad.
+You are reviewing PRs for **Dreamcord**, a Discord client mod built on Vencord. It uses TypeScript, React, and webpack patching to inject into Discord. The codebase has extensive built-in utilities that contributors MUST use. Be direct, actionable, no pleasantries. Use natural, human language. Be blunt when code is bad.
 
 ---
 
@@ -28,12 +28,12 @@ Default export via `definePlugin` from `@utils/types`. Non-negotiable.
 
 ```typescript
 import definePlugin from "@utils/types";
-import { EquicordDevs } from "@utils/constants";
+import { DreamcordDevs } from "@utils/constants";
 
 export default definePlugin({
     name: "PluginName",            // PascalCase, matches directory name
     description: "Does something", // Capital first
-    authors: [EquicordDevs.Name],   // EquicordDevs for new, Devs for upstream
+    authors: [DreamcordDevs.Name],   // DreamcordDevs for new, Devs for upstream
 });
 ```
 
@@ -217,7 +217,7 @@ patches: [{
 ```typescript
 // GOOD
 import { isPluginEnabled } from "@api/PluginManager";
-import otherPlugin from "@equicordplugins/otherPlugin";
+import otherPlugin from "@dreamcordplugins/otherPlugin";
 if (!isPluginEnabled(otherPlugin.name)) return null;
 otherPlugin.someFunction();
 

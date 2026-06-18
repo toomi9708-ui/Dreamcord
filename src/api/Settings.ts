@@ -147,7 +147,7 @@ const DefaultSettings: Settings = {
 
     cloud: {
         authenticated: false,
-        url: "https://cloud.equicord.org/",
+        url: "https://cloud.dreamcord.org/",
         settingsSync: false,
         settingsSyncVersion: 0
     },

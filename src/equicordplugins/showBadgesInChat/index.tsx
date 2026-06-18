@@ -7,8 +7,8 @@
 import "./styles.css";
 
 import badges from "@plugins/_api/badges";
-import { Devs, EquicordDevs } from "@utils/constants";
-import { isEquicordPluginDev, isPluginDev } from "@utils/misc";
+import { Devs, DreamcordDevs } from "@utils/constants";
+import { isDreamcordPluginDev, isPluginDev } from "@utils/misc";
 import definePlugin from "@utils/types";
 import { findComponentByCodeLazy, findCssClassesLazy } from "@webpack";
 
@@ -37,10 +37,10 @@ const discordBadges: readonly [number, string, string][] = Object.freeze([
 function CheckBadge({ badge, author }: { badge: string; author: User; }): JSX.Element | null {
 
     switch (badge) {
-        case "EquicordDonor":
+        case "DreamcordDonor":
             return (
-                <span style={{ order: settings.store.EquicordDonorPosition }}>
-                    {badges.getEquicordDonorBadges(author.id)?.map(badge => (
+                <span style={{ order: settings.store.DreamcordDonorPosition }}>
+                    {badges.getDreamcordDonorBadges(author.id)?.map(badge => (
                         <RoleIconComponent
                             key={author.id}
                             className={roleIcon}
@@ -51,14 +51,14 @@ function CheckBadge({ badge, author }: { badge: string; author: User; }): JSX.El
                     ))}
                 </span>
             );
-        case "EquicordContributer":
-            return isEquicordPluginDev(author.id) ? (
-                <span style={{ order: settings.store.EquicordContributorPosition }}>
+        case "DreamcordContributer":
+            return isDreamcordPluginDev(author.id) ? (
+                <span style={{ order: settings.store.DreamcordContributorPosition }}>
                     <RoleIconComponent
                         className={roleIcon}
-                        name="Equicord Contributor"
+                        name="Dreamcord Contributor"
                         size={20}
-                        src={"https://equicord.org/assets/favicon.png"}
+                        src={"https://dreamcord.org/assets/favicon.png"}
                     />
                 </span>
             ) : null;
@@ -128,8 +128,8 @@ function ChatBadges({ author }: { author: User; }) {
 
     return (
         <span className="vc-sbic-badge-row" style={{ margin: "2px" }}>
-            {settings.store.showEquicordDonor && <CheckBadge badge={"EquicordDonor"} author={author} />}
-            {settings.store.showEquicordContributor && <CheckBadge badge={"EquicordContributer"} author={author} />}
+            {settings.store.showDreamcordDonor && <CheckBadge badge={"DreamcordDonor"} author={author} />}
+            {settings.store.showDreamcordContributor && <CheckBadge badge={"DreamcordContributer"} author={author} />}
             {settings.store.showVencordDonor && <CheckBadge badge={"VencordDonor"} author={author} />}
             {settings.store.showVencordContributor && <CheckBadge badge={"VencordContributer"} author={author} />}
             {settings.store.showDiscordProfile && <CheckBadge badge={"DiscordProfile"} author={author} />}
@@ -140,7 +140,7 @@ function ChatBadges({ author }: { author: User; }) {
 
 export default definePlugin({
     name: "ShowBadgesInChat",
-    authors: [Devs.Inbestigator, EquicordDevs.KrystalSkull],
+    authors: [Devs.Inbestigator, DreamcordDevs.KrystalSkull],
     description: "Shows the message author's badges beside their name in chat.",
     dependencies: ["MessageDecorationsAPI"],
     tags: ["Appearance", "Chat"],

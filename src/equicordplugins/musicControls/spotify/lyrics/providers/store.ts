@@ -5,9 +5,9 @@
  */
 
 import { showNotification } from "@api/Notifications";
-import { settings } from "@equicordplugins/musicControls/settings";
-import { getLyrics, lyricFetchers, providers, updateLyrics } from "@equicordplugins/musicControls/spotify/lyrics/api";
-import { SpotifyStore, type Track } from "@equicordplugins/musicControls/spotify/SpotifyStore";
+import { settings } from "@dreamcordplugins/musicControls/settings";
+import { getLyrics, lyricFetchers, providers, updateLyrics } from "@dreamcordplugins/musicControls/spotify/lyrics/api";
+import { SpotifyStore, type Track } from "@dreamcordplugins/musicControls/spotify/SpotifyStore";
 import { proxyLazyWebpack } from "@webpack";
 import { Flux, FluxDispatcher } from "@webpack/common";
 

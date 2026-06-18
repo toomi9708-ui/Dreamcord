@@ -10,7 +10,7 @@ import { Settings } from "@api/Settings";
 import { BaseText } from "@components/BaseText";
 import { Flex } from "@components/Flex";
 import { ImageIcon, LinkIcon, OpenExternalIcon } from "@components/Icons";
-import { SeekBar } from "@equicordplugins/musicControls/spotify/SeekBar";
+import { SeekBar } from "@dreamcordplugins/musicControls/spotify/SeekBar";
 import { debounce } from "@shared/debounce";
 import { copyWithToast, openImageModal } from "@utils/discord";
 import { classes } from "@utils/misc";

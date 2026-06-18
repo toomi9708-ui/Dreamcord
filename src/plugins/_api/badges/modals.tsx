@@ -71,7 +71,7 @@ export function VencordDonorModal() {
     ));
 }
 
-export function EquicordDonorModal() {
+export function DreamcordDonorModal() {
     openModal(props => (
         <ErrorBoundary noop onError={() => {
             props.onClose();
@@ -90,7 +90,7 @@ export function EquicordDonorModal() {
                     >
                         <Flex justifyContent="center" alignItems="center" gap="0.5em">
                             <Heart />
-                            Equicord Donor
+                            Dreamcord Donor
                         </Flex>
                     </Heading>
                 }
@@ -112,16 +112,16 @@ export function EquicordDonorModal() {
                     </Flex>
                     <div style={{ padding: "1em" }}>
                         <Paragraph>
-                            This Badge is a special perk for Equicord (Not Vencord) Donors
+                            This Badge is a special perk for Dreamcord (Not Vencord) Donors
                         </Paragraph>
                         <Paragraph className={Margins.top20}>
-                            Please consider supporting the development of Equicord by becoming a donor. It would mean a lot! :3
+                            Please consider supporting the development of Dreamcord by becoming a donor. It would mean a lot! :3
                         </Paragraph>
                     </div>
                 </div>
                 <div>
                     <Flex justifyContent="center" style={{ width: "100%" }}>
-                        <DonateButton equicord={true} />
+                        <DonateButton dreamcord={true} />
                     </Flex>
                 </div>
             </Modal>
@@ -129,7 +129,7 @@ export function EquicordDonorModal() {
     ));
 }
 
-export function EquicordTranslatorModal() {
+export function DreamcordTranslatorModal() {
     openModal(props => (
         <ErrorBoundary noop onError={() => {
             props.onClose();
@@ -146,7 +146,7 @@ export function EquicordTranslatorModal() {
                         }}
                     >
                         <Flex justifyContent="center" alignItems="center" gap="0.5em">
-                            Equicord Translator
+                            Dreamcord Translator
                         </Flex>
                     </Heading>
                 }
@@ -156,13 +156,13 @@ export function EquicordTranslatorModal() {
                         <img
                             className="vc-translate-modal-icon"
                             role="presentation"
-                            src="https://badge.equicord.org/translator.png"
+                            src="https://badge.dreamcord.org/translator.png"
                             alt=""
                         />
                     </Flex>
                     <div className="vc-translate-modal-paragraph">
                         <Paragraph>
-                            Awarded to contributors who expand Equicord’s language support by translating content for the community.
+                            Awarded to contributors who expand Dreamcord’s language support by translating content for the community.
                         </Paragraph>
                     </div>
                 </div>

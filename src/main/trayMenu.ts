@@ -91,21 +91,21 @@ function openAboutWindow() {
     });
 }
 
-function createEquicordMenuItems(): MenuItemConstructorOptions[] {
+function createDreamcordMenuItems(): MenuItemConstructorOptions[] {
     return [
         {
-            label: "Equicord",
+            label: "Dreamcord",
             submenu: [
                 {
-                    label: "About Equicord",
+                    label: "About Dreamcord",
                     click: () => openAboutWindow()
                 },
                 {
-                    label: cachedUpdateAvailable ? "Update Equicord" : "Check for Updates",
+                    label: cachedUpdateAvailable ? "Update Dreamcord" : "Check for Updates",
                     click: () => sendToRenderer(IpcEvents.TRAY_CHECK_UPDATES)
                 },
                 {
-                    label: "Repair Equicord",
+                    label: "Repair Dreamcord",
                     click: () => sendToRenderer(IpcEvents.TRAY_REPAIR)
                 },
                 { type: "separator" },
@@ -127,11 +127,11 @@ export function patchTrayMenu(): void {
     const originalBuildFromTemplate = Menu.buildFromTemplate;
 
     Menu.buildFromTemplate = function (template: MenuItemConstructorOptions[]) {
-        const alreadyPatched = template.some(item => item.label === "Equicord");
+        const alreadyPatched = template.some(item => item.label === "Dreamcord");
         if (isTrayMenu(template) && !alreadyPatched) {
             const insertIndex = findInsertIndex(template);
-            const equicordItems = createEquicordMenuItems();
-            template.splice(insertIndex, 0, ...equicordItems);
+            const dreamcordItems = createDreamcordMenuItems();
+            template.splice(insertIndex, 0, ...dreamcordItems);
         }
 
         return originalBuildFromTemplate.call(this, template);

@@ -4,10 +4,10 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-import { brushCanvas, ctx, render } from "@equicordplugins/remix/editor/components/Canvas";
-import { currentSize, ToolDefinition } from "@equicordplugins/remix/editor/components/Toolbar";
-import { Mouse } from "@equicordplugins/remix/editor/input";
-import { line } from "@equicordplugins/remix/editor/utils/canvas";
+import { brushCanvas, ctx, render } from "@dreamcordplugins/remix/editor/components/Canvas";
+import { currentSize, ToolDefinition } from "@dreamcordplugins/remix/editor/components/Toolbar";
+import { Mouse } from "@dreamcordplugins/remix/editor/input";
+import { line } from "@dreamcordplugins/remix/editor/utils/canvas";
 
 export const BrushTool: ToolDefinition = {
     onMouseMove() {

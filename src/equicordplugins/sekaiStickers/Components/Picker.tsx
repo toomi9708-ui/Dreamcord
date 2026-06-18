@@ -5,9 +5,9 @@
  */
 
 import { Flex } from "@components/Flex";
-import { characters } from "@equicordplugins/sekaiStickers/characters.json";
+import { characters } from "@dreamcordplugins/sekaiStickers/characters.json";
 import { RenderModalProps } from "@vencord/discord-types";
-import { Modal,React, ScrollerThin, TextInput } from "@webpack/common";
+import { Modal, React, ScrollerThin, TextInput } from "@webpack/common";
 
 export default function CharSelectModal({ modalProps, setCharacter }: { modalProps: RenderModalProps; setCharacter?: any; }) {
     const [search, setSearch] = React.useState<string>("");

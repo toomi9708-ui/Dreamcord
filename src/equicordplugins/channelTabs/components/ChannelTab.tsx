@@ -5,9 +5,9 @@
  */
 
 import { BaseText } from "@components/BaseText";
-import { ChannelTabsProps, closeTab, ensureUnreadFallbackCountsLoaded, getNotificationDotState, getUnreadFallbackCounts, isTabSelected, moveDraggedTabs, moveToTab, openedTabs, settings, updateUnreadFallbackCounts } from "@equicordplugins/channelTabs/util";
-import { ActivityIcon, CircleQuestionIcon, DiscoveryIcon, EnvelopeIcon, FriendsIcon, ICYMIIcon, NitroIcon, QuestIcon, ShopIcon } from "@equicordplugins/channelTabs/util/icons";
-import { getActiveAutoCompletes } from "@equicordplugins/questify/utils/completion";
+import { ChannelTabsProps, closeTab, ensureUnreadFallbackCountsLoaded, getNotificationDotState, getUnreadFallbackCounts, isTabSelected, moveDraggedTabs, moveToTab, openedTabs, settings, updateUnreadFallbackCounts } from "@dreamcordplugins/channelTabs/util";
+import { ActivityIcon, CircleQuestionIcon, DiscoveryIcon, EnvelopeIcon, FriendsIcon, ICYMIIcon, NitroIcon, QuestIcon, ShopIcon } from "@dreamcordplugins/channelTabs/util/icons";
+import { getActiveAutoCompletes } from "@dreamcordplugins/questify/utils/completion";
 import { classNameFactory } from "@utils/css";
 import { getGuildAcronym, getIntlMessage, getUniqueUsername } from "@utils/discord";
 import { classes } from "@utils/misc";

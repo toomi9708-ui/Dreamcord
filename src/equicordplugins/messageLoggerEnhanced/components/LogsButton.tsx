@@ -18,7 +18,7 @@
 
 import { HeaderBarButton } from "@api/HeaderBar";
 import { LogsIcon } from "@components/Icons";
-import { cl } from "@equicordplugins/messageLoggerEnhanced/index";
+import { cl } from "@dreamcordplugins/messageLoggerEnhanced/index";
 
 import { openLogModal } from "./LogsModal";
 

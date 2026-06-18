@@ -32,7 +32,7 @@ interface PluginCardProps extends React.HTMLProps<HTMLDivElement> {
 export function PluginCard({ plugin, disabled, onRestartNeeded, onMouseEnter, onMouseLeave, isNew }: PluginCardProps) {
     const settings = Settings.plugins[plugin.name];
     const pluginMeta = PluginMeta[plugin.name];
-    const isEquicordPlugin = pluginMeta.folderName.startsWith("src/equicordplugins/") ?? false;
+    const isDreamcordPlugin = pluginMeta.folderName.startsWith("src/dreamcordplugins/") ?? false;
     const isVencordPlugin = pluginMeta.folderName.startsWith("src/plugins/") ?? false;
     const isUserPlugin = pluginMeta?.userPlugin ?? false;
     const isModifiedPlugin = plugin.isModified ?? false;
@@ -92,25 +92,25 @@ export function PluginCard({ plugin, disabled, onRestartNeeded, onMouseEnter, on
     const pluginInfo = [
         {
             condition: isModifiedPlugin,
-            src: "https://equicord.org/assets/icons/equicord/modified.png",
+            src: "https://dreamcord.org/assets/icons/dreamcord/modified.png",
             alt: "Modified",
             title: "Modified Vencord Plugin"
         },
         {
-            condition: isEquicordPlugin,
-            src: "https://equicord.org/assets/favicon.png",
-            alt: "Equicord",
-            title: "Equicord Plugin"
+            condition: isDreamcordPlugin,
+            src: "https://dreamcord.org/assets/favicon.png",
+            alt: "Dreamcord",
+            title: "Dreamcord Plugin"
         },
         {
             condition: isVencordPlugin,
-            src: "https://equicord.org/assets/icons/vencord/icon-light.png",
+            src: "https://dreamcord.org/assets/icons/vencord/icon-light.png",
             alt: "Vencord",
             title: "Vencord Plugin"
         },
         {
             condition: isUserPlugin,
-            src: "https://equicord.org/assets/icons/misc/userplugin.png",
+            src: "https://dreamcord.org/assets/icons/misc/userplugin.png",
             alt: "User",
             title: "User Plugin"
         }

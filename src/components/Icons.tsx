@@ -1116,7 +1116,7 @@ export function HammerAndChiselIcon(props: IconProps) {
     );
 }
 
-export function EquicordIcon(props: IconProps) {
+export function DreamcordIcon(props: IconProps) {
     return (
         <Icon
             {...props}

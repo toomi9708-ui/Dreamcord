@@ -1,11 +1,11 @@
-# Equicord Types
+# Dreamcord Types
 
-Typings for Equicord's api, published to npm
+Typings for Dreamcord's api, published to npm
 
 ```sh
-npm i @equicord/types
+npm i @dreamcord/types
 
-yarn add @equicord/types
+yarn add @dreamcord/types
 
-pnpm add @equicord/types
+pnpm add @dreamcord/types
 ```

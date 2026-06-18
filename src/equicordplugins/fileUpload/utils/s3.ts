@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-import { toProxiedUrl } from "@equicordplugins/fileUpload/constants";
-import { settings } from "@equicordplugins/fileUpload/settings";
+import { toProxiedUrl } from "@dreamcordplugins/fileUpload/constants";
+import { settings } from "@dreamcordplugins/fileUpload/settings";
 import { PluginNative } from "@utils/types";
 
 type S3Store = {

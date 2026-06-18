@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-import { cl } from "@equicordplugins/translatePlus/misc/types";
+import { cl } from "@dreamcordplugins/translatePlus/misc/types";
 
 export function Icon() {
     return (
