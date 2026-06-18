@@ -3,9 +3,9 @@
 // @description     A Discord client mod - Web version
 // @version         %version%
 // @author          Dreamcord (https://github.com/Dreamcord)
-// @namespace       https://github.com/Dreamcord/Dreamcord
-// @supportURL      https://github.com/Dreamcord/Dreamcord
-// @icon            https://raw.githubusercontent.com/Dreamcord/Dreamcord/refs/heads/main/browser/icon.png
+// @namespace       https://github.com/toomi9708-ui/Dreamcord
+// @supportURL      https://github.com/toomi9708-ui/Dreamcord
+// @icon            https://raw.githubusercontent.com/toomi9708-ui/Dreamcord/refs/heads/main/browser/icon.png
 // @license         GPL-3.0
 // @match           *://*.discord.com/*
 // @grant           GM_xmlhttpRequest

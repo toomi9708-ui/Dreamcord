@@ -73,7 +73,7 @@ async function ensureBinary() {
 
     const res = await fetch(BASE_URL + filename, {
         headers: {
-            "User-Agent": "Dreamcord (https://github.com/Dreamcord/Dreamcord)",
+            "User-Agent": "Dreamcord (https://github.com/toomi9708-ui/Dreamcord)",
             "If-None-Match": etag
         }
     });

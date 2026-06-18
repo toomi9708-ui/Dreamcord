@@ -71,7 +71,7 @@ export async function installExt(id: string) {
 
         const buf = await fetchBuffer(url, {
             headers: {
-                "User-Agent": `Electron ${process.versions.electron} ~ Dreamcord (https://github.com/Dreamcord/Dreamcord)`
+                "User-Agent": `Electron ${process.versions.electron} ~ Dreamcord (https://github.com/toomi9708-ui/Dreamcord)`
             }
         });
 

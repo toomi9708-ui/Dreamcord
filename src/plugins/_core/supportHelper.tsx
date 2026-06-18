@@ -146,7 +146,7 @@ async function generateDebugInfoMessage() {
 
     const info = {
         Dreamcord:
-            `v${VERSION} • [${gitHashShort}](<https://github.com/Dreamcord/Dreamcord/commit/${gitHash}>)` +
+            `v${VERSION} • [${gitHashShort}](<https://github.com/toomi9708-ui/Dreamcord/commit/${gitHash}>)` +
             `${IS_EQUIBOP ? "" : SettingsPlugin.getVersionInfo()} - ${Intl.DateTimeFormat("en-US", { dateStyle: "medium" }).format(BUILD_TIMESTAMP)}`,
         Client: `${RELEASE_CHANNEL} ~ ${clientString}`,
         Platform: platformDisplay

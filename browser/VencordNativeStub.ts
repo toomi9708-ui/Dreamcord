@@ -71,7 +71,7 @@ window.VencordNative = {
     },
 
     updater: {
-        getRepo: async () => ({ ok: true, value: "https://github.com/Dreamcord/Dreamcord" }),
+        getRepo: async () => ({ ok: true, value: "https://github.com/toomi9708-ui/Dreamcord" }),
         getUpdates: async () => ({ ok: true, value: [] }),
         update: async () => ({ ok: true, value: false }),
         rebuild: async () => ({ ok: true, value: true }),

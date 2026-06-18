@@ -1,7 +1,7 @@
-# [<img src="./browser/icon.png" width="40" align="left" alt="Dreamcord">](https://github.com/Dreamcord/Dreamcord) Dreamcord
+# [<img src="./browser/icon.png" width="40" align="left" alt="Dreamcord">](https://github.com/toomi9708-ui/Dreamcord) Dreamcord
 
 [![Equibop](https://img.shields.io/badge/Equibop-grey?style=flat)](https://github.com/Dreamcord/Equibop)
-[![Tests](https://github.com/Dreamcord/Dreamcord/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/Dreamcord/Dreamcord/actions/workflows/test.yml)
+[![Tests](https://github.com/toomi9708-ui/Dreamcord/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/toomi9708-ui/Dreamcord/actions/workflows/test.yml)
 [![Discord](https://img.shields.io/discord/1173279886065029291.svg?color=768AD4&label=Discord&logo=discord&logoColor=white)](https://dreamcord.org/discord)
 
 Dreamcord is a fork of [Vencord](https://github.com/Vendicated/Vencord), with over 300+ plugins.
@@ -31,7 +31,7 @@ Linux
 - [AUR](https://aur.archlinux.org/packages?O=0&K=dreamcord)
 
 ```shell
-bash -c "$(curl -sS https://raw.githubusercontent.com/Dreamcord/Dreamcord/refs/heads/main/misc/install.sh)"
+bash -c "$(curl -sS https://raw.githubusercontent.com/toomi9708-ui/Dreamcord/refs/heads/main/misc/install.sh)"
 ```
 
 ## Installing Dreamcord Devbuild
@@ -53,7 +53,7 @@ npm i -g pnpm
 Clone Dreamcord:
 
 ```shell
-git clone https://github.com/Dreamcord/Dreamcord
+git clone https://github.com/toomi9708-ui/Dreamcord
 cd Dreamcord
 ```
 
@@ -91,11 +91,11 @@ Thank you to [Vendicated](https://github.com/Vendicated) for creating [Vencord](
 
 ## Star History
 
-<a href="https://star-history.com/#Dreamcord/Dreamcord&Timeline">
+<a href="https://star-history.com/#toomi9708-ui/Dreamcord&Timeline">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Dreamcord/Dreamcord&type=Timeline&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Dreamcord/Dreamcord&type=Timeline" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Dreamcord/Dreamcord&type=Timeline" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=toomi9708-ui/Dreamcord&type=Timeline&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=toomi9708-ui/Dreamcord&type=Timeline" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=toomi9708-ui/Dreamcord&type=Timeline" />
   </picture>
 </a>
 
